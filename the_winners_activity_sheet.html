@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Winners! — Youth Forest Day 3 Activity Sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .sheet {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #ffffff;
+      width: 794px;
+      min-height: 1123px;
+      padding: 40px 44px 36px;
+      position: relative;
+      color: #2C2C2A;
+    }
+
+    @media print {
+      body { background: none; padding: 0; }
+      .sheet { width: 100%; min-height: auto; padding: 28px 36px 28px; }
+    }
+
+    @page { size: A4; margin: 0; }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .badge-day {
+      background: #5DCAA5;
+      color: #04342C;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .date-line { font-size: 11px; color: #888780; }
+
+    .main-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #0F6E56;
+      letter-spacing: -0.01em;
+      margin: 4px 0 2px;
+      line-height: 1.1;
+    }
+
+    .sub-eng {
+      font-size: 12px;
+      color: #1D9E75;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .tagline { font-size: 13px; color: #5F5E5A; margin-bottom: 4px; }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, #5DCAA5, #9FE1CB, transparent);
+      border: none;
+      margin: 14px 0 18px;
+      border-radius: 2px;
+    }
+
+    .section { margin-bottom: 18px; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #0F6E56;
+      color: #E1F5EE;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section-title-ko { font-size: 16px; font-weight: 700; color: #085041; line-height: 1.2; }
+    .section-title-en { font-size: 10px; color: #1D9E75; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    .time-badge {
+      margin-left: auto;
+      background: #E1F5EE;
+      color: #085041;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+
+    .write-box {
+      background: #ffffff;
+      border: 1.5px solid #C0DD97;
+      border-radius: 10px;
+      padding: 12px 14px 16px;
+    }
+
+    .write-prompt {
+      font-size: 11px;
+      color: #888780;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    .write-lines-wide {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .line-faint {
+      height: 1px;
+      background: #E2E0D8;
+      border-radius: 1px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .stop-box {
+      background: #ffffff;
+      border: 1.5px solid #F0997B;
+      border-radius: 10px;
+      padding: 10px 12px 14px;
+    }
+
+    .start-box {
+      background: #ffffff;
+      border: 1.5px solid #5DCAA5;
+      border-radius: 10px;
+      padding: 10px 12px 14px;
+    }
+
+    .box-label {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .stop-label { color: #993C1D; }
+    .start-label { color: #085041; }
+
+    .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .dot-stop { background: #D85A30; }
+    .dot-start { background: #1D9E75; }
+
+    .box-hint {
+      font-size: 10px;
+      color: #888780;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .col-lines { display: flex; flex-direction: column; gap: 18px; }
+
+    .line-mid {
+      height: 1px;
+      background: #E2E0D8;
+      border-radius: 1px;
+    }
+
+    .send-box {
+      background: #ffffff;
+      border: 1.5px solid #AFA9EC;
+      border-radius: 10px;
+      padding: 12px 14px 16px;
+    }
+
+    .send-hint {
+      font-size: 10.5px;
+      color: #5F5E5A;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      background: #EEEDFE;
+      border-radius: 6px;
+      padding: 8px 10px;
+    }
+
+    .send-hint strong { color: #3C3489; }
+
+    .msg-prompt {
+      font-size: 11px;
+      color: #534AB7;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .footer {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #C0DD97;
+      padding-top: 10px;
+    }
+
+    .footer-ko { font-size: 10px; color: #888780; }
+    .footer-en { font-size: 10px; color: #1D9E75; font-weight: 500; letter-spacing: 0.08em; }
+
+    .corner-deco {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      opacity: 0.12;
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <svg class="corner-deco" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="70" cy="10" r="40" fill="#5DCAA5"/>
+      <circle cx="80" cy="0" r="20" fill="#1D9E75"/>
+    </svg>
+
+    <div class="top-bar">
+      <span class="badge-day">DAY 3 · 청춘포레스트</span>
+      <span class="date-line">Name ________________________</span>
+    </div>
+
+    <div class="main-title">The Winners!</div>
+    <div class="sub-eng">Youth Forest Closing Program — Activity Sheet</div>
+    <div class="tagline">숲에서 얻은 것을 일상으로 — Bringing the Forest Into Your Every Day</div>
+
+    <hr class="divider">
+
+    <div class="section">
+      <div class="section-header">
+        <div class="step-num">1</div>
+        <div>
+          <div class="section-title-ko">Recall · 나의 숲에 남은 한 줄기 빛</div>
+          <div class="section-title-en">One ray of light that stayed with me</div>
+        </div>
+        <div class="time-badge">10 min</div>
+      </div>
+      <div class="write-box">
+        <div class="write-prompt">청춘포레스트 기간 동안 가장 깊이 남은 키워드 또는 문장 하나를 적어보세요.<br>· Write the one keyword or sentence from this Youth Forest retreat that has stayed with you most deeply.</div>
+        <div class="write-lines-wide">
+          <div class="line-faint"></div>
+          <div class="line-faint"></div>
+          <div class="line-faint"></div>
+          <div class="line-faint"></div>
+          <div class="line-faint"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="step-num">2</div>
+        <div>
+          <div class="section-title-ko">Connect · 일상으로 연결하기</div>
+          <div class="section-title-en">Bridging Youth Forest and real life</div>
+        </div>
+        <div class="time-badge">10 min</div>
+      </div>
+      <div class="two-col">
+        <div class="stop-box">
+          <div class="box-label stop-label">
+            <div class="dot dot-stop"></div>
+            STOP — 멈출 것
+          </div>
+          <div class="box-hint">일상에 돌아갔을 때 나를 다시 무기력하게 만들거나 에너지를 갉아먹을 것 같은 습관 또는 환경<br>· Habits or environments that drain your energy</div>
+          <div class="col-lines">
+            <div class="line-mid"></div>
+            <div class="line-mid"></div>
+            <div class="line-mid"></div>
+            <div class="line-mid"></div>
+            <div class="line-mid"></div>
+            <div class="line-mid"></div>
+          </div>
+        </div>
+        <div class="start-box">
+          <div class="box-label start-label">
+            <div class="dot dot-start"></div>
+            START — 시작할 것
+          </div>
+          <div class="box-hint">Youth Forest에서 얻은 마음을 유지하기 위해 일상에서 실천할 수 있는 가장 작은 행동<br>· The smallest action to keep this heart alive</div>
+          <div class="col-lines">
+            <div class="line-mid"></div>
+            <div class="line-mid"></div>
+            <div class="line-mid"></div>
+            <div class="line-mid"></div>
+            <div class="line-mid"></div>
+            <div class="line-mid"></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:8px; font-size:10.5px; color:#5F5E5A; padding: 0 2px;">
+        예시 · e.g. 아침 감사기도 3분 / 일주일에 한번 하늘 보며 산책 / 조원들과 통화하기 / 하루 10분 침묵시간
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="step-num">3</div>
+        <div>
+          <div class="section-title-ko">Send · 한 달 뒤의 나에게</div>
+          <div class="section-title-en">A letter to future me — one month later</div>
+        </div>
+        <div class="time-badge">10 min</div>
+      </div>
+      <div class="send-box">
+        <div class="send-hint">
+          <strong>포레스트 시트 작성 안내</strong> · 구글 링크에 닉네임으로 접속해 위 활동 내용을 기록하고, 한 달 뒤의 나에게 응원의 메시지를 남겨주세요.<br>
+          Log in with your nickname via the Google link, record your activity, and write a message of encouragement to yourself — one month from now.<br>
+          <span style="color:#085041; font-weight:700;">* 한 달 뒤 Youth Forest 본부팀에서 카카오톡으로 메시지를 전달해 드립니다. · The team will send your message via KakaoTalk one month later.</span>
+        </div>
+        <div class="msg-prompt">한 달 뒤의 나에게 쓰는 응원 메시지 · An encouraging message for future me:</div>
+        <div class="write-lines-wide">
+          <div class="line-faint"></div>
+          <div class="line-faint"></div>
+          <div class="line-faint"></div>
+          <div class="line-faint"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-ko">청춘포레스트 3일차 · The Winners 프로그램 활동지</div>
+      <div class="footer-en">YOUTH FOREST · DAY 3 CLOSING</div>
+    </div>
+  </div>
+</body>
+</html>
